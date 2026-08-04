@@ -104,6 +104,7 @@ char	**logic(char **buff, char const *s, char c, size_t end)
 	return (buff);
 }
 
+/*
 int main()
 {
 	size_t	i;
@@ -118,3 +119,5 @@ int main()
 		i++;
 	}
 }
+*/
+
