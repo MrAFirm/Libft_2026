@@ -18,9 +18,10 @@
 # include <stddef.h>
 # include <limits.h>
 
+/*
 # include <string.h>
 # include <stdio.h>
-
+*/
 
 /* Part 1 - Libc Functions */
 int		ft_isalpha(int c);
