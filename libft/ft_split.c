@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 15:16:59 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/04 17:01:43 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/04 17:13:42 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ int main()
 	size_t	i;
 	char	*str = "Hello      World         +";
 	char	**buff;
-
+	
 	i = 0;
 	buff = ft_split(str, ' ');
 	while (buff[i])
@@ -120,4 +120,3 @@ int main()
 	}
 }
 */
-
