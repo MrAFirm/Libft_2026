@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/05 23:11:36 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/06 17:00:01 by likhye-y         ###   ########.fr       */
+/*   Created: 2026/08/06 16:47:55 by likhye-y          #+#    #+#             */
+/*   Updated: 2026/08/06 22:26:07 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*node;
 
@@ -23,11 +23,13 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		else
 		{
 			node = *lst;
-			new->next = node;
-			*lst = new;
+			while (node->next != NULL)
+				node = node->next;
+			node->next = new;
 		}
 	}
 }
+
 /*
 int main()
 {
@@ -36,11 +38,14 @@ int main()
 	t_list	*new = ft_lstnew("Hello");
 	t_list	*new2 = ft_lstnew("World");
 	t_list	*new3 = ft_lstnew("!");
-
+	
 	ft_lstadd_front(&head, new);
 	ft_lstadd_front(&head, new2);
 	ft_lstadd_front(&head, new3);
-
+	t_list	*new4 = ft_lstnew("Bro!");
+	
+	ft_lstadd_back(&head, new4);
+	
 	current = head;
 	while (current)
 	{

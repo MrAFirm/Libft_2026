@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 14:50:10 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/05 23:11:24 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/06 17:09:40 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # include <stddef.h>
 # include <limits.h>
 
-/*
+
 # include <string.h>
 # include <stdio.h>
-*/
+
 
 /* Part 1 - Libc Functions */
 int		ft_isalpha(int c);
@@ -66,7 +66,13 @@ typedef struct	s_list
 	struct s_list	*next;
 }	t_list;
 
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+unsigned int	ft_lstsize(t_list *lst);
+void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstdelone(t_list *lst, void (*del)(void *));
+void			ft_lstclear(t_list **lst, void (*del)(void *));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
