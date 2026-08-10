@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 22:16:49 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/05 22:31:33 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/10 18:05:11 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 
 	if (!s)
-		return (NULL);
+		return ;
 	while (s[i] != '\0')
 	{
 		f(i, &s[i]);

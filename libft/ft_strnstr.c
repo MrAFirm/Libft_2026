@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 21:33:23 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/28 21:54:57 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/10 18:00:41 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	if (needle[0] == '\0')
-		return (haystack);
+		return ((char *)haystack);
 	while (haystack[i] && i < len)
 	{
 		j = 0;
@@ -27,7 +27,7 @@ char	*strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			j++;
 			if (needle[i] == '\0')
-				return (&haystack[i]);
+				return ((char *)&haystack[i]);
 		}
 		i++;
 			

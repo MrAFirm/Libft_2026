@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 22:41:03 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/05 23:05:05 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/10 18:07:12 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void	ft_putnbr_fd(int n, int fd)
 /*
 int main()
 {
-	ft_putnbr_fd(INT_MIN, 2);
+	ft_putnbr_fd(INT_MIN, 1);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 19:11:43 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/27 21:13:37 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/10 17:52:34 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	*memmove(void *to, const void *from, size_t n)
 	size_t	j;
 
 	i = 0;
-	if (to == NULL && from == NULL)
+	if ((char *)to == NULL && (const char *)from == NULL)
 		return (NULL);
 	if (to <= from)
 	{
 		while (i < n)
 		{
-			((char *)to)[i] = ((char *)from)[i];
+			((char *)to)[i] = ((const char *)from)[i];
 			i++;
 		}
 	}
@@ -33,7 +33,7 @@ void	*memmove(void *to, const void *from, size_t n)
 	{
 		while (j >= 0)
 		{
-			((char *)to)[j] = ((char *)from)[j];
+			((char *)to)[j] = ((const char *)from)[j];
 			j--;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 17:59:10 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/27 18:15:41 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/10 17:50:27 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	bzero(void *ptr, size_t n)
 {
-	unsigned char	p;
+	unsigned char	*p;
 	size_t			i;
 
-	p = (unsigned char)ptr;
+	p = (unsigned char *)ptr;
 	i = 0;
 	while (i < n)
 	{
-		((char *)p)[i] = 0;
+		((unsigned char *)p)[i] = 0;
 		i++;
 	}
 }
