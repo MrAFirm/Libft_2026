@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 18:17:01 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/28 18:24:12 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/11 17:18:17 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,14 @@
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-	{
 		c -= 32;
-		return (1);
-	}
-	return (0);
+	return (c);
 }
+
+/*
+int main()
+{
+	char	c = ft_toupper('c');
+	printf("%c\n", c);
+}
+*/

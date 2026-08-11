@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 18:24:32 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/28 18:25:08 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/11 17:17:28 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,14 @@
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-	{
 		c += 32;
-		return (1);
-	}
-	return (0);
+	return (c);
 }
+
+/*
+int main()
+{
+	char	c = ft_tolower('C');
+	printf("%c\n", c);
+}
+*/

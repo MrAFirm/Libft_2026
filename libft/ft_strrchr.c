@@ -6,25 +6,25 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 18:57:17 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/28 19:02:41 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/11 17:21:14 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 
 	i = 0;
-	if (!str)
+	if (!s)
 		return (NULL);
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	while (i >= 0)
 	{
-		if (str[i] == c)
-			return ((char *)&str[i]);
+		if (s[i] == c)
+			return ((char *)&s[i]);
 		i--;
 	}
 	return (NULL);
@@ -35,9 +35,7 @@ char	*ft_strrchr(const char *str, int c)
 int main()
 {
 	char	*str = "helleo";
-	
 	printf("%s\n", ft_strrchr(str, 'e'));
 }
-
 Prints from the last occ of char.
 */

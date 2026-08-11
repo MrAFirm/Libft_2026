@@ -6,13 +6,13 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 21:55:10 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/10 17:42:15 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/11 17:36:03 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;
@@ -21,17 +21,19 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	while (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (str[i] == '-')
-			sign *= -1;
+		if (nptr[i + 1] == '-' || nptr[i + 1] == '+')
+			return (sign * result);
+		if (nptr[i] == '-')
+			sign = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		result = result * 10 + (str[i] - '0');
+		result = result * 10 + (nptr[i] - '0');
 		i++;
 	}
 	return (sign * result);
@@ -41,7 +43,7 @@ int	ft_atoi(const char *str)
 #include <stdio.h>
 int main()
 {
-	printf("%d\n", ft_atoi("--12a+34"));
-	printf("%d\n", atoi("-12a+34"));
+	printf("%d\n", ft_atoi("+12a+34"));
+	printf("%d\n", atoi("+12a+34"));
 }
 */

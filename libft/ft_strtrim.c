@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/31 14:27:35 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/31 22:27:12 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/11 17:52:40 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ size_t	find_end(char const *s1, char const *set, int k, size_t end)
 		{
 			end = k;
 			break ;
-			}
+		}
 		k--;
 	}
 	return (end);

@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 21:19:16 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/29 16:17:13 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/11 17:27:28 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t				i;
 	const unsigned char	*str1;
 	const unsigned char	*str2;
 
