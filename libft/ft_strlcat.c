@@ -27,9 +27,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	j = 0;
 	while (dst[j] != '\0')
 		j++;
-	if (size <= j)
-		return (size + src_len);
 	total_len = j + src_len;
+	if (size <= j)
+		return (total_len);
 	while (src[i] != '\0' && j < size - 1)
 	{
 		dst[j] = src[i];
@@ -40,6 +40,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (total_len);
 }
 
+/*
 #include <stdio.h>
 int main()
 {
@@ -49,4 +50,4 @@ int main()
 	printf("%zu\n", ft_strlcat(dest, src, 5));
 	printf("%s\n", dest);
 }
-
+*/
