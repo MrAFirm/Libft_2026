@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 17:09:06 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/11 18:15:21 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/17 21:30:10 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		j++;
 	total_len = j + src_len;
 	if (size <= j)
-		return (total_len);
+		return (size + src_len);
 	while (src[i] != '\0' && j < size - 1)
 	{
 		dst[j] = src[i];
@@ -41,13 +41,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 
 /*
+#include <string.h>
 #include <stdio.h>
 int main()
 {
-	char	dest[5] = "He";
+	char dest[30]; ft_memset(dest, 0, 30);
 	char	*src = "World!";
+	dest[0] = 'B';
 	
-	printf("%zu\n", ft_strlcat(dest, src, 5));
+	printf("%zu\n", ft_strlcat(dest, src, 6));
+	printf("%zu\n", ft_strlen(src));
+	printf("%d\n", strcmp(dest, "B"));
 	printf("%s\n", dest);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 21:03:39 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/11 17:26:41 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/17 20:19:19 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		return (NULL);
 	while (i < n)
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 			return ((void *)&str[i]);
 		i++;
 	}
@@ -31,9 +31,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 
 /*
+#include <stdio.h>
 int main()
 {
-	char	*str = "hello";
-	printf("%s\n", (char *)ft_memchr(str, 'e', 5));
+	char	str[] = {0, 1, 2 ,3 ,4 ,5};
+	printf("%d\n", *(char *)ft_memchr(str, 2 + 256, 3));
 }
 */

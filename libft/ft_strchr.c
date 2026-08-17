@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 18:25:22 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/11 17:20:04 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/17 20:28:42 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ char	*ft_strchr(const char *s, int c)
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	return (NULL);
+	if (s[i] == '\0' && s[i] != (unsigned char)c)
+		return (NULL);
+	return ((char *)&s[i]);
 }
 
 /*
@@ -33,7 +35,7 @@ char	*ft_strchr(const char *s, int c)
 int main()
 {
 	char	*str = "hello";
-	printf("%s\n", ft_strchr(str, 'e'));
+	printf("%s\n", ft_strchr(str, 0));
 }
 Prints from the first occ of char.
 */

@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 15:16:59 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/04 17:13:42 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/18 00:51:39 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	count_word(char const *s, char delim)
 
 	count = 0;
 	i = 0;
-	while (s[i] == delim)
+	while (s[i] != '\0' && s[i] == delim)
 		i++;
 	while (s[i] != '\0')
 	{
@@ -76,6 +76,7 @@ char	*copying(char *buff, char const *s, size_t start, size_t end)
 	return (buff);
 }
 
+#include <stdio.h>
 char	**logic(char **buff, char const *s, char c, size_t end)
 {
 	size_t	i;
@@ -89,7 +90,7 @@ char	**logic(char **buff, char const *s, char c, size_t end)
 		while (s[i] == c)
 			i++;
 		if (s[i] == '\0')
-			return (buff);
+			break ;
 		start = i;
 		while (s[i] != c && s[i] != '\0')
 			i++;

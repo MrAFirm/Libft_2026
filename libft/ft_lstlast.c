@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 16:44:38 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/06 16:47:42 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/18 00:53:27 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (lst == NULL)
+		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);

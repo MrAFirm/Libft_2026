@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 21:19:16 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/11 17:27:28 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/14 17:43:45 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	while (str1[i] == str2[i] && i < n - 1)
 		i++;
-	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	return (str1[i] - str2[i]);
 }
 
 /*

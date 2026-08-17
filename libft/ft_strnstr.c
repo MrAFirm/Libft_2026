@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 21:33:23 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/11 17:31:47 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/17 23:47:32 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	needle = little;
 	if (needle[0] == '\0')
 		return ((char *)haystack);
-	while (i < len)
+	while (i < len && haystack[i] != '\0')
 	{
 		j = 0;
 		check = i;
 		while (check < len && haystack[check] == needle[j])
 		{
 			j++;
-			if (needle[j] == '\0') 
+			if (needle[j] == '\0')
 				return ((char *)&haystack[i]);
 			check++;
 		}
@@ -42,11 +42,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 }
 
 /*
+#include <stdio.h>
 int main()
 {
-	char	*str1 = "Hello World";
-	char	*sub = "or";
+	char	*str1 = "";
+	char	*sub = "coucou";
 	
-	printf("%s\n", ft_strnstr(str1, sub, 5));
+	printf("%s\n", ft_strnstr(str1, sub, -1));
 }
 */
+

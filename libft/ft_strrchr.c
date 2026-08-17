@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 18:57:17 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/11 17:21:14 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/17 20:49:30 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	if (!s)
@@ -23,19 +23,27 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)&s[i]);
 		i--;
+		if (i < 0)
+		{
+			i = 0;
+			break ;
+		}
 	}
-	return (NULL);
+	if (s[i] != (unsigned char)c)
+		return (NULL);
+	return ((char *)&s[i]);
 }
 
 /*
 #include <stdio.h>
 int main()
 {
-	char	*str = "helleo";
+	char	*str = "hillo";
 	printf("%s\n", ft_strrchr(str, 'e'));
 }
+
 Prints from the last occ of char.
 */
