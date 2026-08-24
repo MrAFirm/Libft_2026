@@ -1,5 +1,9 @@
 *This project has been created as part of the 42 curriculum by likhye-y.*
 
+<img width="462" height="609" alt="Screenshot from 2026-08-24 23-36-15" src="https://github.com/user-attachments/assets/22254aa6-8b86-46d9-836c-b5c3ceed918a" />
+<img width="2251" height="502" alt="Screenshot from 2026-08-24 23-38-13" src="https://github.com/user-attachments/assets/2678b93b-fee9-4110-add9-e694cac5a9a7" />
+
+
 ## Description
 
 This project is for us to reverse engineer and recreate a lot of the typical functions we normally use in different libraries and conform them into one, our own library for 42.
