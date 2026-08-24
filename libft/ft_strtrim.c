@@ -6,21 +6,21 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/31 14:27:35 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/17 22:10:44 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/19 21:37:04 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-size_t	find_start(char const *s1, char const *set, size_t start);
-size_t	find_end(char const *s1, char const *set, int k, size_t end);
-char	*copy_into_arr(int start, int end, char *buff, char const *s1);
+static size_t	find_start(char const *s1, char const *set, int start);
+static size_t	find_end(char const *s1, char const *set, int k, size_t end);
+static char		*copy_into_arr(int start, int end, char *buff, char const *s1);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		k;
-	int	start;
+	int		start;
 	int		end;
 	char	*buff;
 
@@ -46,7 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (buff);
 }
 
-size_t	find_start(char const *s1, char const *set, size_t start)
+static size_t	find_start(char const *s1, char const *set, int start)
 {
 	size_t	i;
 	size_t	j;
@@ -60,17 +60,17 @@ size_t	find_start(char const *s1, char const *set, size_t start)
 			j++;
 		if (set[j] == '\0')
 		{
-			start = i;
+			start = (int)i;
 			break ;
 		}
 		i++;
 	}
 	if (s1[i] == '\0')
-		start = i;
+		start = (int)i;
 	return (start);
 }
 
-size_t	find_end(char const *s1, char const *set, int k, size_t end)
+static size_t	find_end(char const *s1, char const *set, int k, size_t end)
 {
 	size_t	j;
 
@@ -90,7 +90,7 @@ size_t	find_end(char const *s1, char const *set, int k, size_t end)
 	return (end);
 }
 
-char	*copy_into_arr(int start, int end, char *buff, char const *s1)
+static char	*copy_into_arr(int start, int end, char *buff, char const *s1)
 {
 	size_t	i;
 
@@ -105,13 +105,10 @@ char	*copy_into_arr(int start, int end, char *buff, char const *s1)
 	return (buff);
 }
 
-
 /*
 int main()
 {
-	printf("%s\n", ft_strtrim("", "123"));
-	free(ft_strtrim("", "123"));
+	printf("%s\n", ft_strtrim("cbiciba", "abc"));
+	free(ft_strtrim("a", "abc"));
 }
 */
-
-

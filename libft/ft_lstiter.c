@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 17:07:50 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/06 17:08:57 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/22 21:42:09 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst)
+	if (!lst || !f)
+		return ;
+	while (lst != NULL)
 	{
-		while (lst != NULL)
-		{
-			f(lst->content);
-			lst = lst->next;
-		}
+		f(lst->content);
+		lst = lst->next;
 	}
 }

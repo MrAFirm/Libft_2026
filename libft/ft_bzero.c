@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 17:59:10 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/13 20:40:45 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/21 18:21:33 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *ptr, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)p)[i] = 0;
+		p[i] = 0;
 		i++;
 	}
 }

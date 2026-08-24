@@ -6,13 +6,13 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 14:57:09 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/13 22:20:20 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/19 15:02:52 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*copy_into_ar(char const *s, unsigned int start, size_t size);
+static char	*copy_into_ar(char const *s, unsigned int start, size_t size);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -41,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (buff);
 }
 
-char	*copy_into_ar(char const *s, unsigned int start, size_t size)
+static char	*copy_into_ar(char const *s, unsigned int start, size_t size)
 {
 	unsigned int	strlen;
 	size_t			i;

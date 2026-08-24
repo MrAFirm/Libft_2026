@@ -6,16 +6,16 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 15:16:59 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/18 00:51:39 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/19 15:02:29 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_word(char const *s, char delim);
-char	**freeing(char **buff, int j);
-char	*copying(char *buff, char const *s, size_t start, size_t end);
-char	**logic(char **buff, char const *s, char c, size_t end);
+static size_t	count_word(char const *s, char delim);
+static char		**freeing(char **buff, int j);
+static char		*copying(char *buff, char const *s, size_t start, size_t end);
+static char		**logic(char **buff, char const *s, char c, size_t end);
 
 char	**ft_split(char const *s, char c)
 {
@@ -30,7 +30,7 @@ char	**ft_split(char const *s, char c)
 	return (buff);
 }
 
-size_t	count_word(char const *s, char delim)
+static size_t	count_word(char const *s, char delim)
 {
 	size_t	count;
 	size_t	i;
@@ -49,7 +49,7 @@ size_t	count_word(char const *s, char delim)
 	return (count);
 }
 
-char	**freeing(char **buff, int j)
+static char	**freeing(char **buff, int j)
 {
 	j = j - 1;
 	while (j >= 0)
@@ -61,7 +61,7 @@ char	**freeing(char **buff, int j)
 	return (NULL);
 }
 
-char	*copying(char *buff, char const *s, size_t start, size_t end)
+static char	*copying(char *buff, char const *s, size_t start, size_t end)
 {
 	size_t	k;
 
@@ -76,8 +76,7 @@ char	*copying(char *buff, char const *s, size_t start, size_t end)
 	return (buff);
 }
 
-#include <stdio.h>
-char	**logic(char **buff, char const *s, char c, size_t end)
+static char	**logic(char **buff, char const *s, char c, size_t end)
 {
 	size_t	i;
 	int		j;

@@ -6,16 +6,16 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 20:13:23 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/05 21:56:27 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/21 23:43:20 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*handle_min(char *arr);
-char	*negative_digit(int n, size_t count, char *arr);
-char	*positive_digit(int n, size_t count, char *arr);
-size_t	malloc_len_count(size_t count, int n);
+static char		*handle_min(char *arr);
+static char		*negative_digit(int n, size_t count, char *arr);
+static char		*positive_digit(int n, size_t count, char *arr);
+static size_t	malloc_len_count(size_t count, int n);
 
 char	*ft_itoa(int n)
 {
@@ -24,7 +24,7 @@ char	*ft_itoa(int n)
 
 	count = 0;
 	arr = NULL;
-	if (n == INT_MIN)
+	if (n == -2147483648)
 	{
 		arr = malloc(sizeof(char) * 11 + 1);
 		if (arr == NULL)
@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 	return (NULL);
 }
 
-char	*handle_min(char *arr)
+static char	*handle_min(char *arr)
 {
 	arr[0] = '-';
 	arr[1] = '2';
@@ -63,7 +63,7 @@ char	*handle_min(char *arr)
 	return (arr);
 }
 
-char	*negative_digit(int n, size_t count, char *arr)
+static char	*negative_digit(int n, size_t count, char *arr)
 {
 	n = -n;
 	count = 1 + count + 1;
@@ -88,7 +88,7 @@ char	*negative_digit(int n, size_t count, char *arr)
 	return (arr);
 }
 
-char	*positive_digit(int n, size_t count, char *arr)
+static char	*positive_digit(int n, size_t count, char *arr)
 {
 	count = count + 1;
 	arr = malloc(sizeof(char) * count);
@@ -111,7 +111,7 @@ char	*positive_digit(int n, size_t count, char *arr)
 	return (arr);
 }
 
-size_t	malloc_len_count(size_t count, int n)
+static size_t	malloc_len_count(size_t count, int n)
 {
 	int	nb;
 

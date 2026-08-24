@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 21:58:54 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/08/11 18:04:53 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/08/22 21:39:16 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (str == NULL)
