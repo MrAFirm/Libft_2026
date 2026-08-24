@@ -1,8 +1,7 @@
 *This project has been created as part of the 42 curriculum by likhye-y.*
 
-![Project Screenshot](libft/passed_photo/Screenshot%from%2026-08-24%23-36-15.png)
-![Project Screenshot](libft/passed_photo/Screenshot%from%2026-08-24%23-38-13.png)
-
+<img width="462" height="609" alt="Screenshot from 2026-08-24 23-36-15" src="https://github.com/user-attachments/assets/17b7e3f8-b2c4-4d72-9c83-e21854a449cd" />
+<img width="2251" height="502" alt="Screenshot from 2026-08-24 23-38-13" src="https://github.com/user-attachments/assets/4998692e-b0b6-40fc-a436-5e21df2bb184" />
 
 ## Description
 
